@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>Air Quality Dashboard</title>
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      background: #0f172a;
+      color: white;
+    }
+
+    .card {
+      margin: 100px auto;
+      padding: 30px;
+      width: 300px;
+      border-radius: 20px;
+      background: #1e293b;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+
+    .value {
+      font-size: 50px;
+      margin: 20px 0;
+    }
+
+    .status {
+      font-size: 20px;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    .good {
+      background: green;
+    }
+
+    .medium {
+      background: orange;
+    }
+
+    .bad {
+      background: red;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🌫️ Air Quality Dashboard</h1>
+
+  <div class="card">
+    <div>نسبة التلوث</div>
+    <div class="value" id="pollution">0</div>
+    <div class="status" id="status">جاري القياس...</div>
+  </div>
+
+  <script>
+    function generateData() {
+      let value = Math.floor(M
